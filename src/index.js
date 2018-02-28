@@ -6,14 +6,16 @@ module.exports = function longestConsecutiveLength(array) {
 var num = 0;
 var maxCounter = 0;
 var step = 0;
-var cache = "";
+//var cache = "";
 
 function loop(){
   
   if(array.indexOf(num) != -1 && cache.indexOf("_" + num + "_") == -1){
+    
     cache = cache + "_" + num + "_";
   num++;
   counter++;
+  array[step].delete;
   loop();
 }
 }
