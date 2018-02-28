@@ -1,6 +1,6 @@
 module.exports = function longestConsecutiveLength(array) {
   // your solution here
-if (array.length > 5000)
+if (array.length > 20000)
 {
   return false;
 }
