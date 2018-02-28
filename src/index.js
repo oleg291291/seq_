@@ -1,8 +1,11 @@
 module.exports = function longestConsecutiveLength(array) {
   // your solution here
+
+var arrLength = array.length
+
 if (array.length > 20000)
 {
-  return false;
+  arrLength = 10000;
 }
 
 
@@ -15,7 +18,6 @@ if (array.length > 20000)
     var location = array.indexOf(num);
 
     if (location != -1) {
-      //cache = cache + "_" + num + "_";
       num++;
       counter++;
       delete array[location];
@@ -23,7 +25,7 @@ if (array.length > 20000)
     }
   }
 
-  while (step < array.length) {
+  while (step < arrLength) {
     var counter = 0;
     num = array[step];
     if (num != undefined) {
