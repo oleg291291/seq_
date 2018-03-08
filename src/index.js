@@ -41,24 +41,26 @@ var merge_sort = function(array){
 };
 
 sortedArr = merge_sort(array);
-var maxLength = 0;
-var currLength = 0;
-for(var i = 0; i < sortedArr.length; i++){
-  if(sortedArr[i] == sortedArr[i+1] - 1){
+var maxLength = 1;
+var currLength = 1;
+for(var z = 0; z < sortedArr.length; z++){
+  if(sortedArr[z] === sortedArr[z+1] - 1){
     currLength++;
   }
   else{
     if(currLength > maxLength){
       maxLength = currLength;
     }
-    currLength = 0;
+    currLength = 1;
   }
 }
 
 
-return maxLength + 1;
+return maxLength;
 
 }
+
+
 // var arrLength = array.length
 
 // if (array.length > 20000)
