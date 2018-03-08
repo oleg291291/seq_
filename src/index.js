@@ -1,6 +1,13 @@
 module.exports = function longestConsecutiveLength(array) {
   // your solution here
 
+var arrLength = array.length
+
+if (array.length > 5000)
+{
+  
+
+
 var merge_sort = function(array){ 
   function merge(a, aux, lo, mid, hi ){
     var result = [];
@@ -40,6 +47,7 @@ var merge_sort = function(array){
 
 };
 
+
 sortedArr = merge_sort(array);
 var maxLength = 1;
 var currLength = 1;
@@ -58,46 +66,37 @@ for(var z = 0; z < sortedArr.length; z++){
 
 return maxLength;
 
+
 }
+else{
+  var num = 0;
+  var maxCounter = 0;
+  var step = 0;
 
 
-// var arrLength = array.length
-
-// if (array.length > 20000)
-// {
-//   arrLength = 15000;
-// }
-
-
-//   var num = 0;
-//   var maxCounter = 0;
-//   var step = 0;
-
-
-//   function loop() {
+  function loop() {
     
-//     var location = array.indexOf(num);
+    var location = array.indexOf(num);
   
-// while(counter < arrLength && location != -1){
+while(counter < arrLength && location != -1){
     
-//       num++;
-//       counter++;
+      num++;
+      counter++;
 
-//      location = array.indexOf(num);
-//     }
+     location = array.indexOf(num);
+    }
   
-//   }
-//   while (step < arrLength) {
-//     var counter = 0;
-//     num = array[step];
+  }
+  while (step < arrLength) {
+    var counter = 0;
+    num = array[step];
  
-//       loop();
-//       if (counter > maxCounter) {
-//         maxCounter = counter;
-//       }
-//     step++;
-//   }
-//   return maxCounter;
-// }
-
-
+      loop();
+      if (counter > maxCounter) {
+        maxCounter = counter;
+      }
+    step++;
+  }
+  return maxCounter;
+}
+}
