@@ -34,12 +34,29 @@ var merge_sort = function(array){
     return array;
   }
   return merge_sort(array); 
+
+
+
+
 };
 
-console.log(merge_sort(array))
+sortedArr = merge_sort(array);
+var maxLength = 0;
+var currLength = 0;
+for(var i = 0; i < sortedArr.length; i++){
+  if(sortedArr[i] == sortedArr[i+1] - 1){
+    currLength++;
+  }
+  else{
+    if(currLength > maxLength){
+      maxLength = currLength;
+    }
+    currLength = 0;
+  }
+}
 
 
-
+return maxLength + 1;
 
 }
 // var arrLength = array.length
