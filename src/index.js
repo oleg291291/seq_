@@ -52,6 +52,10 @@ sortedArr = merge_sort(array);
 var maxLength = 1;
 var currLength = 1;
 for(var z = 0; z < sortedArr.length; z++){
+  if(sortedArr[z] === sortedArr[z+1]){
+    console.log('repeated number')
+  }
+  else 
   if(sortedArr[z] === sortedArr[z+1] - 1){
     currLength++;
   }
